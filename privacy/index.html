@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Tintboard</title>
+<meta name="description" content="What Tintboard processes: nothing leaves your Atlassian site, the extension sends nothing to us, and we see personal data only when you contact us.">
+<meta property="og:title" content="Privacy Policy · Tintboard">
+<meta property="og:description" content="What Tintboard processes: nothing leaves your Atlassian site, the extension sends nothing to us, and we see personal data only when you contact us.">
+<meta property="og:image" content="https://tintboard.com/assets/1-board-after.png">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://tintboard.com/privacy/">
+<meta property="og:url" content="https://tintboard.com/privacy/">
+<meta name="theme-color" content="#101214">
+
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/logo-144.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #101214; --fg: #f1f2f4; --muted: #b6c2cf; --faint: #8c9bab; --line: #2c333a; --soft: #1a1d21; --accent: #f5cd47; --ink: #172b4d; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.65 Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; }
+h1, h2, h3, .brand { font-family: 'Space Grotesk', Inter, system-ui, sans-serif; letter-spacing: -0.02em; }
+a { color: var(--accent); }
+a:hover { color: #ffe28a; }
+img { max-width: 100%; height: auto; }
+.wrap { max-width: 1480px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px); }
+.bar { display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; min-height: 76px; }
+.brand { display: flex; gap: 10px; align-items: center; font-weight: 700; font-size: 22px; color: var(--fg); text-decoration: none; margin-right: auto; }
+.brand img { width: 32px; height: 32px; }
+nav a { color: var(--muted); text-decoration: none; font-size: 16px; }
+nav a:hover, nav a[aria-current] { color: var(--fg); }
+nav a.pill { background: var(--fg); color: var(--bg); padding: 10px 18px; border-radius: 999px; font-weight: 600; }
+.btn { display: inline-block; text-decoration: none; padding: 15px 24px; border-radius: 999px; font-weight: 700; }
+.btn.primary { background: var(--accent); color: var(--ink); }
+.btn.ghost { border: 1px solid #454f59; color: var(--fg); font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { padding: 7px 15px; border-radius: 999px; font-weight: 600; font-size: 15px; }
+.hero { padding: 56px 0 24px; display: flex; flex-direction: column; gap: 26px; }
+.hero h1 { margin: 0; font-size: clamp(42px, 7vw, 104px); line-height: 0.98; max-width: 1240px; }
+.hero p { margin: 0; font-size: clamp(19px, 1.5vw, 23px); color: var(--muted); max-width: 820px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.small { font-size: 15px; color: var(--faint); margin: 0; }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 20px; padding: 40px 0; }
+.pair figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.pair img, .shots img { border-radius: 16px; display: block; }
+.pair .after img { box-shadow: 0 0 0 3px var(--accent); }
+figcaption { color: var(--faint); font-size: 15px; }
+/* Eight features: four per row on wide screens, two on tablets, one on phones. */
+.features { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); padding: 32px 0; }
+@media (max-width: 1000px) { .features { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .features { grid-template-columns: 1fr; } }
+.features div { padding: 20px 24px 20px 0; }
+.features .sw { width: 40px; height: 40px; border-radius: 10px; display: block; margin-bottom: 12px; }
+.features h3 { margin: 0 0 6px; font-size: 24px; }
+.features p { margin: 0; color: var(--muted); }
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 20px; padding: 8px 0 64px; }
+.light { background: var(--fg); color: #101214; padding: 72px 0; }
+.light .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 40px; align-items: start; }
+.light h2 { margin: 0; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; }
+.light p { margin: 0 0 18px; font-size: 18px; }
+.light a { color: #0c66e4; font-weight: 700; }
+.pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; padding: 72px 0; }
+.pricing h2 { margin: 0 0 8px; font-size: 44px; }
+.price { border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+.price .num { font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700; margin: 4px 0; }
+.price p { margin: 0; color: var(--muted); }
+.beta { background: var(--accent); color: var(--ink); border-radius: 28px; padding: 48px 36px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-bottom: 64px; }
+.beta div { flex: 1 1 420px; }
+.beta h2 { margin: 0 0 6px; font-size: 38px; }
+.beta p { margin: 0; font-size: 18px; }
+.beta a { background: #101214; color: #fff; }
+.guides { border-top: 1px solid var(--line); padding: 40px 0 64px; }
+.guides h2 { margin: 0 0 12px; font-size: 28px; }
+.guides ul { margin: 0; padding-left: 20px; }
+.doc { max-width: 880px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 24px) 72px; }
+.doc h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.1; margin: 24px 0 20px; }
+.doc h2 { font-size: 26px; margin-top: 44px; }
+.doc h3 { font-size: 20px; margin-top: 28px; }
+code { background: var(--soft); border: 1px solid var(--line); padding: 1px 6px; border-radius: 6px; font-size: 0.88em; overflow-wrap: anywhere; }
+pre { background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 14px; overflow-x: auto; }
+pre code { background: none; border: 0; padding: 0; }
+table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+blockquote { margin: 0; padding: 6px 18px; border-left: 4px solid var(--accent); color: var(--muted); background: var(--soft); border-radius: 0 10px 10px 0; }
+footer { border-top: 1px solid var(--line); color: var(--faint); font-size: 14px; }
+footer .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 24px; padding-top: 40px; padding-bottom: 24px; }
+footer h2 { font-size: 15px; color: var(--fg); margin: 0 0 10px; letter-spacing: 0; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: var(--fg); }
+footer .legal { padding-bottom: 32px; }
+.btn.off { border: 1px dashed #454f59; color: var(--faint); font-weight: 600; cursor: default; }
+.stores { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; margin: 24px 0; }
+.store { border: 1px solid var(--line); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+.store h3 { margin: 0; font-size: 22px; }
+.store p { margin: 0; color: var(--muted); }
+.product { padding: 56px 0 24px; display: flex; flex-direction: column; gap: 22px; }
+.product h1 { margin: 0; font-size: clamp(40px, 6vw, 88px); line-height: 1; max-width: 1100px; }
+.product > p { margin: 0; font-size: clamp(19px, 1.4vw, 22px); color: var(--muted); max-width: 820px; }
+.list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px 40px; padding: 40px 0; border-top: 1px solid var(--line); }
+.list h3 { margin: 0 0 4px; font-size: 21px; }
+.list p { margin: 0; color: var(--muted); }
+.steps { counter-reset: s; list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 32px 1fr; gap: 14px; align-items: baseline; }
+.steps li::before { content: counter(s); flex: 0 0 32px; height: 32px; border-radius: 50%; background: var(--accent); color: var(--ink); font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+.tiers { width: 100%; display: table; margin: 8px 0 0; }
+.notfound { padding: 96px 0; display: flex; flex-direction: column; gap: 20px; }
+.notfound h1 { margin: 0; font-size: clamp(44px, 7vw, 88px); }
+mark { background: #f5cd47; color: #172b4d; padding: 0 4px; border-radius: 4px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px; margin: 20px 0; }
+.card { display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--line); border-radius: 16px; padding: 20px; text-decoration: none; color: var(--fg); }
+.card:hover { border-color: var(--accent); color: var(--fg); }
+.card span { color: var(--muted); font-size: 15px; }
+.faq { border-top: 1px solid var(--line); padding: 40px 0; }
+.faq h2 { margin: 0 0 16px; font-size: 28px; }
+.faq details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+.faq summary { cursor: pointer; font-weight: 600; font-size: 18px; }
+.faq details p { margin: 10px 0 0; color: var(--muted); max-width: 760px; }
+.menu { display: none; position: relative; }
+.menu summary { list-style: none; cursor: pointer; border: 1px solid #454f59; border-radius: 999px; padding: 8px 16px; font-weight: 600; }
+.menu summary::-webkit-details-marker { display: none; }
+.menu nav { position: absolute; right: 0; top: 48px; z-index: 5; background: var(--soft); border: 1px solid var(--line); border-radius: 16px; padding: 10px; display: grid; min-width: 200px; }
+.menu nav a { padding: 10px 12px; border-radius: 10px; }
+.menu nav a:hover { background: var(--line); }
+/* Big screens: the whole page grows with the window instead of leaving empty sides. */
+@media (min-width: 1600px) { body { zoom: 1.12; } }
+@media (min-width: 2100px) { body { zoom: 1.3; } }
+@media (min-width: 2800px) { body { zoom: 1.6; } }
+@media (max-width: 760px) {
+  .wide-nav { display: none !important; }
+  .menu { display: block; }
+  .bar { flex-wrap: nowrap; }
+}
+</style>
+</head>
+<body>
+<header><div class="wrap bar"><a class="brand" href="../"><img src="../assets/logo-144.png" alt="">tintboard</a><nav class="wide-nav" aria-label="Main" style="display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center"><a href="../jira/">Jira</a><a href="../confluence/">Confluence</a><a href="../#pricing">Pricing</a><a href="../docs/">Docs</a><a href="../docs/deploy-extension/">For IT</a><a href="../support/">Support</a><a class="pill" href="../#beta">Join the beta</a></nav><details class="menu"><summary>Menu</summary><nav aria-label="Main"><a href="../jira/">Jira</a><a href="../confluence/">Confluence</a><a href="../#pricing">Pricing</a><a href="../docs/">Docs</a><a href="../docs/deploy-extension/">For IT</a><a href="../support/">Support</a><a href="../#beta">Join the beta</a></nav></details></div></header>
+<main class="doc"><h1>Tintboard — Privacy Policy</h1>
+<p><strong>Last updated:</strong> 4 November 2026</p>
+<p>This policy covers the Tintboard apps for Jira Cloud and Confluence Cloud (the &quot;<strong>Forge apps</strong>&quot;), the Tintboard browser extension for Chrome, Edge and Firefox (the &quot;<strong>Extension</strong>&quot;), and our website and support channels.</p>
+<p><strong>Who we are:</strong> Fares Baatour, micro-entrepreneur, 127 rue des Enfants du Paradis, 92100 Boulogne-Billancourt, France, France (&quot;<strong>we</strong>&quot;). Contact: <a href="mailto:hello@tintboard.com">hello@tintboard.com</a>.</p>
+<h2>1. In short</h2>
+<ul>
+<li><strong>Your Jira and Confluence content never leaves Atlassian.</strong> The Forge apps run on Atlassian&#39;s infrastructure and keep their settings in Atlassian&#39;s Forge storage and in your own Jira and Confluence. We operate no server that receives your data.</li>
+<li><strong>The Extension talks only to your own Atlassian site</strong> (<code>*.atlassian.net</code>). It reads the rules your admin configured, changes how pages look in your browser, and marks the weeks you used it on your own Jira profile. It sends nothing to us or to any third party.</li>
+<li><strong>We see personal data only when you contact us</strong> or when Atlassian shares licensing contact details with us as the app vendor.</li>
+</ul>
+<h2>2. Data processed by the Forge apps</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Purpose</th>
+<th>Where it is stored</th>
+<th>Retention</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Colour and layout rules (labels, statuses, conditions, colours, space defaults). A card rule on the assignee keeps that person&#39;s Atlassian account ID, never their name or email</td>
+<td>Apply the styling your admin configured</td>
+<td>Forge storage, in your Atlassian site&#39;s data residency region</td>
+<td>Until deleted by an admin or the app is uninstalled. Every week the app reports the account IDs it keeps to Atlassian, as Atlassian requires, and deletes the card rules naming an account that has been closed</td>
+</tr>
+<tr>
+<td>A signed copy of those rules and of the licence state (active, trial or lapsed); the only personal data in it is the account IDs of card rules on the assignee</td>
+<td>Let the Extension read the rules with each user&#39;s own session</td>
+<td>A property named <code>tintboard.published</code> on each Jira project and each Confluence space of your site. Every user who can see the project or space can read it</td>
+<td>Rewritten daily; stays in your site after uninstall until an admin deletes it</td>
+</tr>
+<tr>
+<td>The weeks (at most the last 5, e.g. <code>2026-W45</code>) in which a user&#39;s Extension was active; no times, pages or content</td>
+<td>Show admins how many users have the Extension active (a count only, never names)</td>
+<td>A property named <code>tintboardseen</code> on that user&#39;s own Jira profile, written by the Extension</td>
+<td>Older weeks are dropped at the next visit; stays on the profile after uninstall until an admin deletes it</td>
+</tr>
+<tr>
+<td>The latest user count</td>
+<td>Show the count on the admin page without recounting each time</td>
+<td>Forge storage</td>
+<td>Replaced every hour</td>
+</tr>
+<tr>
+<td>Licence state provided by Atlassian</td>
+<td>Enable or disable the features</td>
+<td>Forge storage (last value only)</td>
+<td>Until the app is uninstalled</td>
+</tr>
+</tbody></table>
+<p>We cannot read Forge storage ourselves outside the app&#39;s own code. The data is processed under Atlassian&#39;s infrastructure and security controls (<a href="https://www.atlassian.com/trust">Atlassian Trust Center</a>). For this data, your organisation is the controller.</p>
+<h2>3. Data processed by the Extension</h2>
+<ul>
+<li><strong>Personal preferences</strong> (on/off, font size, line height, reading width) are stored <strong>locally in your browser</strong> (<code>chrome.storage.local</code> or its Firefox equivalent). They are not synced through us.</li>
+<li><strong>Page content:</strong> the Extension reads the Jira or Confluence page currently displayed only to apply styles. Issue fields it reads for card rules are kept in the page&#39;s memory for at most one minute and never stored or sent anywhere.</li>
+<li><strong>Requests:</strong> the Extension calls your own Atlassian site&#39;s APIs with your existing session to read the configured rules, the fields that card rules test (summary, labels, status, priority, type, assignee, due date, last-updated date, parent issue and components) and, once a day, to mark the current week on your Jira profile. It requests access to <code>*.atlassian.net</code> only.</li>
+<li><strong>Local storage:</strong> besides your preferences, the Extension keeps, per site, the state it last showed in the toolbar and the date it last marked your profile.</li>
+<li><strong>No analytics, tracking or advertising.</strong> The Extension contains no third-party scripts and loads no remote code.</li>
+</ul>
+<h2>4. Data we process as the vendor</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Source</th>
+<th>Purpose</th>
+<th>Legal basis (GDPR)</th>
+<th>Retention</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Name, email and company of the licence&#39;s technical and billing contacts</td>
+<td>Atlassian Marketplace partner reporting</td>
+<td>Licence administration, trial onboarding emails, service notices</td>
+<td>Legitimate interest / contract</td>
+<td>Duration of the licence + 3 years</td>
+</tr>
+<tr>
+<td>Content of support requests (name, email, message, screenshots you choose to send)</td>
+<td>You, by email</td>
+<td>Answer your request</td>
+<td>Contract / legitimate interest</td>
+<td>3 years after the request is closed</td>
+</tr>
+<tr>
+<td>Website server logs (IP address, browser, pages viewed)</td>
+<td>Our website host, GitHub Pages (GitHub, Inc.). We have no access to these logs and set no cookies</td>
+<td>Security and operation of the website</td>
+<td>Legitimate interest</td>
+<td>As set by GitHub&#39;s privacy statement</td>
+</tr>
+</tbody></table>
+<p>You can unsubscribe from onboarding emails at any time with the link in each email.</p>
+<h2>5. Sharing</h2>
+<p>We do not sell or rent personal data. We share it only with:</p>
+<ul>
+<li><strong>Atlassian</strong>, which runs the Marketplace, billing and the Forge platform.</li>
+<li>Our providers: OVHcloud (Zimbra), France for email, and GitHub, Inc. for website hosting. Each is bound by data processing terms.</li>
+<li>Authorities, where the law requires it.</li>
+</ul>
+<p>Some providers may process data outside the European Economic Area. In that case the transfer relies on the European Commission&#39;s standard contractual clauses or an adequacy decision.</p>
+<h2>6. Your rights</h2>
+<p>Under the GDPR you can request access, rectification, erasure, restriction, portability, or object to processing. Write to <a href="mailto:hello@tintboard.com">hello@tintboard.com</a>. We answer within one month.</p>
+<p>For data stored in your Atlassian site (Section 2), contact your organisation&#39;s Jira or Confluence admin, who controls it. Uninstalling the app removes its Forge storage. The <code>tintboard.published</code> and <code>tintboardseen</code> properties stay in your site until an admin deletes them through Atlassian&#39;s REST API; our documentation gives the exact calls.</p>
+<p>You can complain to the French data protection authority, the <a href="https://www.cnil.fr/">CNIL</a>.</p>
+<h2>7. Security</h2>
+<ul>
+<li>No vendor-hosted infrastructure holds customer data.</li>
+<li>The Extension uses Manifest V3, minimal permissions and no remote code.</li>
+<li>Dependencies are scanned automatically.</li>
+<li>Vulnerabilities can be reported to <a href="mailto:hello@tintboard.com">hello@tintboard.com</a>.</li>
+</ul>
+<h2>8. Changes</h2>
+<p>We will post changes on this page and update the date at the top. Material changes are announced in the app&#39;s release notes.</p>
+</main>
+<footer><div class="wrap cols"><div><h2>Product</h2><ul><li><a href="../jira/">Tintboard for Jira</a></li><li><a href="../confluence/">Tintboard for Confluence</a></li><li><a href="../#pricing">Pricing</a></li><li><a href="../install/">Install the extension</a></li></ul></div><div><h2>Docs</h2><ul><li><a href="../docs/getting-started/">Get started</a></li><li><a href="../docs/deploy-extension/">IT deployment guide</a></li><li><a href="../docs/remove-data/">Remove Tintboard data</a></li><li><a href="../guides/">Guides</a></li><li><a href="../changelog/">What's new</a></li></ul></div><div><h2>Company</h2><ul><li><a href="../support/">Support</a></li><li><a href="../security/">Security</a></li><li><a href="../privacy/">Privacy</a></li><li><a href="../terms/">Terms</a></li><li><a href="mailto:hello@tintboard.com?subject=Hello">Contact</a></li></ul></div></div><div class="wrap legal">Not affiliated with or endorsed by Atlassian. Jira and Confluence are trademarks of Atlassian.</div></footer>
+</body>
+</html>
