@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Label, status and card colours for Jira and Confluence · Tintboard</title>
+<meta name="description" content="Choose label, status, column and card colours once for your whole team, and comfortable reading in Confluence. Runs on Atlassian. Free for 10 users.">
+<meta property="og:title" content="Label, status and card colours for Jira and Confluence · Tintboard">
+<meta property="og:description" content="Choose label, status, column and card colours once for your whole team, and comfortable reading in Confluence. Runs on Atlassian. Free for 10 users.">
+<meta property="og:image" content="https://tintboard.com/assets/1-board-after.png?v=9b28df320c">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://tintboard.com/">
+<meta property="og:url" content="https://tintboard.com/">
+<meta name="theme-color" content="#101214">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is a browser extension needed?","acceptedAnswer":{"@type":"Answer","text":"Atlassian apps run in a sandbox and can't restyle Jira's or Confluence's own pages. The extension applies the colours your admin chose, in each person's browser. Without it, people still see the colour legend in each Jira issue."}},{"@type":"Question","name":"Does any of our data leave Atlassian?","acceptedAnswer":{"@type":"Answer","text":"No. There is no Tintboard server. Rules are stored in your own site, signed so nobody can fake them, and the extension talks only to your atlassian.net site with your own session."}},{"@type":"Question","name":"Does it work on team-managed boards?","acceptedAnswer":{"@type":"Answer","text":"Yes, including card colours, which Jira itself doesn't offer there."}},{"@type":"Question","name":"Does it slow Jira down?","acceptedAnswer":{"@type":"Answer","text":"Labels and statuses are coloured within about 15 ms of Jira showing them. Card rules need one Jira search per 100 cards on screen."}},{"@type":"Question","name":"What if Atlassian changes a page?","acceptedAnswer":{"@type":"Answer","text":"That colour switches itself off instead of breaking the page, and we fix it within 2 business days."}},{"@type":"Question","name":"Can we add our own CSS to Confluence Cloud?","acceptedAnswer":{"@type":"Answer","text":"Not free CSS, on purpose: one wrong rule can hide content. Tintboard's page styles cover what teams ask for: headings in your colour, serif fonts, links always underlined and striped tables, for the site or each space."}},{"@type":"Question","name":"Does it work on mobile?","acceptedAnswer":{"@type":"Answer","text":"No. Browser extensions don't run in Atlassian's mobile apps."}},{"@type":"Question","name":"What happens if our licence lapses?","acceptedAnswer":{"@type":"Answer","text":"The colours switch off for everyone. Your rules are kept and come back as soon as the licence is renewed."}}]}</script>
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo-144.png?v=6c0382917e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #101214; --fg: #f1f2f4; --muted: #b6c2cf; --faint: #8c9bab; --line: #2c333a; --soft: #1a1d21; --accent: #f5cd47; --ink: #172b4d; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.65 Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; }
+h1, h2, h3, .brand { font-family: 'Space Grotesk', Inter, system-ui, sans-serif; letter-spacing: -0.02em; }
+a { color: var(--accent); }
+a:hover { color: #ffe28a; }
+img { max-width: 100%; height: auto; }
+.wrap { max-width: 1480px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px); }
+.bar { display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; min-height: 76px; }
+.brand { display: flex; gap: 10px; align-items: center; font-weight: 700; font-size: 22px; color: var(--fg); text-decoration: none; margin-right: auto; }
+.brand img { width: 32px; height: 32px; }
+nav a { color: var(--muted); text-decoration: none; font-size: 16px; }
+nav a:hover, nav a[aria-current] { color: var(--fg); }
+nav a.pill { background: var(--fg); color: var(--bg); padding: 10px 18px; border-radius: 999px; font-weight: 600; }
+.btn { display: inline-block; text-decoration: none; padding: 15px 24px; border-radius: 999px; font-weight: 700; }
+.btn.primary { background: var(--accent); color: var(--ink); }
+.btn.ghost { border: 1px solid #454f59; color: var(--fg); font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { padding: 7px 15px; border-radius: 999px; font-weight: 600; font-size: 15px; }
+.hero { padding: 56px 0 24px; display: flex; flex-direction: column; gap: 26px; }
+.hero h1 { margin: 0; font-size: clamp(42px, 7vw, 104px); line-height: 0.98; max-width: 1240px; }
+.hero p { margin: 0; font-size: clamp(19px, 1.5vw, 23px); color: var(--muted); max-width: 820px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.small { font-size: 15px; color: var(--faint); margin: 0; }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 20px; padding: 40px 0; }
+.pair figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.pair img, .shots img { border-radius: 16px; display: block; }
+.pair .after img { box-shadow: 0 0 0 3px var(--accent); }
+figcaption { color: var(--faint); font-size: 15px; }
+/* Twelve features: four per row on wide screens, two on tablets, one on phones. */
+.features { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); padding: 32px 0; }
+@media (max-width: 1000px) { .features { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .features { grid-template-columns: 1fr; } }
+.features div { padding: 20px 24px 20px 0; }
+.features .sw { width: 40px; height: 40px; border-radius: 10px; display: block; margin-bottom: 12px; }
+.features h3 { margin: 0 0 6px; font-size: 24px; }
+.features p { margin: 0; color: var(--muted); }
+.soon { display: inline-block; vertical-align: middle; margin-left: 8px; padding: 2px 9px; border-radius: 999px; background: var(--accent); color: var(--ink); font: 700 12px/1.6 Inter, system-ui, sans-serif; letter-spacing: 0; }
+.popup { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; margin: 20px 0; }
+.popup img { width: 352px; border-radius: 12px; border: 1px solid var(--line); }
+.popup div { flex: 1 1 280px; }
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 20px; padding: 8px 0 64px; }
+.light { background: var(--fg); color: #101214; padding: 72px 0; }
+.light .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 40px; align-items: start; }
+.light h2 { margin: 0; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; }
+.light p { margin: 0 0 18px; font-size: 18px; }
+.light a { color: #0c66e4; font-weight: 700; }
+.pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; padding: 72px 0; }
+.pricing h2 { margin: 0 0 8px; font-size: 44px; }
+.price { border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+.price .num { font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700; margin: 4px 0; }
+.price p { margin: 0; color: var(--muted); }
+.beta { background: var(--accent); color: var(--ink); border-radius: 28px; padding: 48px 36px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-bottom: 64px; }
+.beta div { flex: 1 1 420px; }
+.beta h2 { margin: 0 0 6px; font-size: 38px; }
+.beta p { margin: 0; font-size: 18px; }
+.beta a { background: #101214; color: #fff; }
+.guides { border-top: 1px solid var(--line); padding: 40px 0 64px; }
+.guides h2 { margin: 0 0 12px; font-size: 28px; }
+.guides ul { margin: 0; padding-left: 20px; }
+.doc { max-width: 880px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 24px) 72px; }
+.doc h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.1; margin: 24px 0 20px; }
+.doc h2 { font-size: 26px; margin-top: 44px; }
+.doc h3 { font-size: 20px; margin-top: 28px; }
+code { background: var(--soft); border: 1px solid var(--line); padding: 1px 6px; border-radius: 6px; font-size: 0.88em; overflow-wrap: anywhere; }
+pre { background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 14px; overflow-x: auto; }
+pre code { background: none; border: 0; padding: 0; }
+table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+blockquote { margin: 0; padding: 6px 18px; border-left: 4px solid var(--accent); color: var(--muted); background: var(--soft); border-radius: 0 10px 10px 0; }
+footer { border-top: 1px solid var(--line); color: var(--faint); font-size: 14px; }
+footer .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 24px; padding-top: 40px; padding-bottom: 24px; }
+footer h2 { font-size: 15px; color: var(--fg); margin: 0 0 10px; letter-spacing: 0; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: var(--fg); }
+footer .legal { padding-bottom: 32px; }
+.btn.off { border: 1px dashed #454f59; color: var(--faint); font-weight: 600; cursor: default; }
+.stores { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; margin: 24px 0; }
+.store { border: 1px solid var(--line); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+.store h3 { margin: 0; font-size: 22px; }
+.store p { margin: 0; color: var(--muted); }
+.product { padding: 56px 0 24px; display: flex; flex-direction: column; gap: 22px; }
+.product h1 { margin: 0; font-size: clamp(40px, 6vw, 88px); line-height: 1; max-width: 1100px; }
+.product > p { margin: 0; font-size: clamp(19px, 1.4vw, 22px); color: var(--muted); max-width: 820px; }
+.list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px 40px; padding: 40px 0; border-top: 1px solid var(--line); }
+.list h3 { margin: 0 0 4px; font-size: 21px; }
+.list p { margin: 0; color: var(--muted); }
+.steps { counter-reset: s; list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 32px 1fr; gap: 14px; align-items: baseline; }
+.steps li::before { content: counter(s); flex: 0 0 32px; height: 32px; border-radius: 50%; background: var(--accent); color: var(--ink); font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+.tiers { width: 100%; display: table; margin: 8px 0 0; }
+.notfound { padding: 96px 0; display: flex; flex-direction: column; gap: 20px; }
+.notfound h1 { margin: 0; font-size: clamp(44px, 7vw, 88px); }
+mark { background: #f5cd47; color: #172b4d; padding: 0 4px; border-radius: 4px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px; margin: 20px 0; }
+.card { display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--line); border-radius: 16px; padding: 20px; text-decoration: none; color: var(--fg); }
+.card:hover { border-color: var(--accent); color: var(--fg); }
+.card span { color: var(--muted); font-size: 15px; }
+.faq { border-top: 1px solid var(--line); padding: 40px 0; }
+.faq h2 { margin: 0 0 16px; font-size: 28px; }
+.faq details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+.faq summary { cursor: pointer; font-weight: 600; font-size: 18px; }
+.faq details p { margin: 10px 0 0; color: var(--muted); max-width: 760px; }
+.menu { display: none; position: relative; }
+.menu summary { list-style: none; cursor: pointer; border: 1px solid #454f59; border-radius: 999px; padding: 8px 16px; font-weight: 600; }
+.menu summary::-webkit-details-marker { display: none; }
+.menu nav { position: absolute; right: 0; top: 48px; z-index: 5; background: var(--soft); border: 1px solid var(--line); border-radius: 16px; padding: 10px; display: grid; min-width: 200px; }
+.menu nav a { padding: 10px 12px; border-radius: 10px; }
+.menu nav a:hover { background: var(--line); }
+/* Big screens: the whole page grows with the window instead of leaving empty sides. */
+@media (min-width: 1600px) { body { zoom: 1.12; } }
+@media (min-width: 2100px) { body { zoom: 1.3; } }
+@media (min-width: 2800px) { body { zoom: 1.6; } }
+@media (max-width: 760px) {
+  .wide-nav { display: none !important; }
+  .menu { display: block; }
+  .bar { flex-wrap: nowrap; }
+}
+</style>
+</head>
+<body>
+<header><div class="wrap bar"><a class="brand" href=""><img src="assets/logo-144.png?v=6c0382917e" alt="">tintboard</a><nav class="wide-nav" aria-label="Main" style="display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center"><a href="jira/">Jira</a><a href="confluence/">Confluence</a><a href="#pricing">Pricing</a><a href="docs/">Docs</a><a href="docs/deploy-extension/">For IT</a><a href="support/">Support</a><a class="pill" href="#beta">Join the beta</a></nav><details class="menu"><summary>Menu</summary><nav aria-label="Main"><a href="jira/">Jira</a><a href="confluence/">Confluence</a><a href="#pricing">Pricing</a><a href="docs/">Docs</a><a href="docs/deploy-extension/">For IT</a><a href="support/">Support</a><a href="#beta">Join the beta</a></nav></details></div></header>
+
+<div class="wrap">
+<section class="hero">
+  <div class="chips" aria-hidden="true"><span class="chip" style="background:#ae2e24;color:#ffffff">blocked</span><span class="chip" style="background:#f5cd47;color:#172b4d">in review</span><span class="chip" style="background:#6e5dc6;color:#ffffff">customer</span><span class="chip" style="background:#6cc3e0;color:#172b4d">design</span><span class="chip" style="background:#216e4e;color:#ffffff">done</span><span class="chip" style="background:#f38a3f;color:#172b4d">security</span></div>
+  <h1>Stop guessing what the grey cards mean.</h1>
+  <p>Jira picks label colours at random. Tintboard lets your team choose them, along with status, column and card colours, so a board says "blocked" before anyone reads it.</p>
+  <div class="actions">
+    <a class="btn primary" href="#beta">Join the beta</a>
+    <a class="btn ghost" href="install/">Get the extension</a>
+    <a class="btn ghost" href="docs/deploy-extension/">Install for everyone (IT)</a>
+  </div>
+  <p class="small">Free for up to 10 users · Chrome, Edge and Firefox · Runs on Atlassian: nothing leaves your site</p>
+</section>
+<section class="pair">
+  <figure><img src="assets/1-board-before.png?v=dfa21e7982" alt="A Jira board before Tintboard: labels in random colours, plain cards" loading="lazy" style="opacity:.85"><figcaption>Before: Jira's random label colours, every card alike.</figcaption></figure>
+  <figure class="after"><img src="assets/1-board-after.png?v=9b28df320c" alt="The same board with Tintboard: coloured column titles, labels, tinted bug cards and striped stories" loading="lazy"><figcaption style="color:var(--fg)">After: the team's colours, the same for everyone.</figcaption></figure>
+</section>
+<section class="features">
+  <div><span class="sw" style="background:#ae2e24"></span><h3>Labels</h3><p>Pick each label's colour. Readable text, automatically.</p></div>
+  <div><span class="sw" style="background:#f5cd47"></span><h3>Statuses and columns</h3><p>A colour per status, and column titles that match.</p></div>
+  <div><span class="sw" style="background:#6e5dc6"></span><h3>Card rules</h3><p>Tint or stripe cards by label, epic, component, person or date, on team-managed boards too.</p></div>
+  <div><span class="sw" style="background:#6cc3e0"></span><h3>Confluence reading</h3><p>Bigger text, calmer spacing and width, per space or per reader.</p></div>
+  <div><span class="sw" style="background:#216e4e"></span><h3>Fields on cards</h3><p>Story points, sprint or any custom field on every card, team-managed boards included.</p></div>
+  <div><span class="sw" style="background:#0c66e4"></span><h3>Colours per project</h3><p>Each team its own colours, on top of the site's.</p></div>
+  <div><span class="sw" style="background:#626f86"></span><h3>Swimlanes</h3><p>Colour each swimlane, by assignee, epic or anything you group by.</p></div>
+  <div><span class="sw" style="background:linear-gradient(135deg,#1e2230 50%,#c9a0f5 50%)"></span><h3>Code block themes</h3><p>Dark or light themes for code in Confluence, readable for everyone.</p></div>
+  <div><span class="sw" style="background:#f38a3f"></span><h3>Colours legend</h3><p>A "Colours" button on every board, and a legend in each issue, so new teammates know what each colour means.</p></div>
+  <div><span class="sw" style="background:linear-gradient(180deg,#ae2e24 30%,#f1f2f4 30%)"></span><h3>WIP limits</h3><p>A column's title turns red when it holds more cards than its limit.</p></div>
+  <div><span class="sw" style="background:#94c748"></span><h3>Issue view comfort</h3><p>A narrow details panel, or hide it and keep only the status.</p></div>
+  <div><span class="sw" style="background:#206a83"></span><h3>Page styles</h3><p>Headings, fonts, links and tables in your team's look, for each Confluence space. No CSS needed.</p></div>
+</section>
+<section class="pair">
+  <figure><img src="assets/8-card-fields.png?v=f76e073265" alt="A Jira board whose cards show components and fix versions in a line at the bottom" loading="lazy"><figcaption>Fields on cards: components and fix version, on every card.</figcaption></figure>
+  <figure><img src="assets/12-code-theme.png?v=4980b2f040" alt="A Confluence page with code blocks in the dark Night theme" loading="lazy"><figcaption>Code blocks in the Night theme, in Confluence.</figcaption></figure>
+</section>
+<section class="pair">
+  <figure><img src="assets/14-legend.png?v=e0e5a1946e" alt="A Jira board with the Colours panel open, listing card rules, labels, statuses and columns" loading="lazy"><figcaption>The Colours panel explains every colour on the board.</figcaption></figure>
+  <figure><img src="assets/19-page-style-handbook.png?v=55914d15ad" alt="A Confluence page in the Handbook style: serif text and headings with a purple line under them" loading="lazy"><figcaption>Page styles, here Handbook, in Confluence.</figcaption></figure>
+</section>
+<section class="shots">
+  <figure style="margin:0"><img src="assets/3-issue-after.png?v=d52f1b58a0" alt="An issue with its status and labels in the team's colours" loading="lazy"></figure>
+  <figure style="margin:0"><img src="assets/6-confluence-after.png?v=b407744b31" alt="A Confluence page with larger text and wider line spacing" loading="lazy"></figure>
+</section>
+</div>
+<section class="light">
+  <div class="wrap">
+    <h2>Your data stays home. IT stays happy.</h2>
+    <div>
+      <p><strong>Runs on Atlassian.</strong> There is no Tintboard server. Rules live in your own Jira and Confluence, signed so nobody can fake them.</p>
+      <p><strong>A small browser extension</strong> applies the colours, because Atlassian apps can't restyle Jira's own pages. One policy installs it for everyone: Google Workspace, Intune, Group Policy, macOS or Firefox.</p>
+      <p><strong>Never breaks a page.</strong> If Atlassian changes a screen, that colour switches off. We fix it within 2 business days.</p>
+      <p><a href="docs/deploy-extension/">IT deployment guide</a> · <a href="security/">Security</a> · <a href="privacy/">Privacy</a></p>
+    </div>
+  </div>
+</section>
+<div class="wrap">
+<section class="pricing" id="pricing">
+  <div><h2>Free for 10.</h2><p class="small" style="font-size:18px;color:var(--muted)">Then a small per-user price, billed through the Atlassian Marketplace, with a 30-day trial.</p></div>
+  <div class="price"><p>Jira</p><p class="num">$1.20</p><p>per user per month, less on bigger sites</p><p style="margin-top:14px"><a href="jira/#pricing">See every tier</a></p></div>
+  <div class="price"><p>Confluence</p><p class="num">$0.80</p><p>per user per month, less on bigger sites</p><p style="margin-top:14px"><a href="confluence/#pricing">See every tier</a></p></div>
+</section>
+<section class="beta" id="beta">
+  <div><h2>Six months free for beta teams</h2><p>Before the public launch, 20–30 teams, in exchange for honest feedback.</p></div>
+  <a class="btn" href="mailto:hello@tintboard.com?subject=Tintboard%20beta">Ask for a place</a>
+</section>
+<section class="faq" id="faq">
+  <h2>Questions</h2>
+  <details><summary>Why is a browser extension needed?</summary><p>Atlassian apps run in a sandbox and can't restyle Jira's or Confluence's own pages. The extension applies the colours your admin chose, in each person's browser. Without it, people still see the colour legend in each Jira issue.</p></details><details><summary>Does any of our data leave Atlassian?</summary><p>No. There is no Tintboard server. Rules are stored in your own site, signed so nobody can fake them, and the extension talks only to your atlassian.net site with your own session.</p></details><details><summary>Does it work on team-managed boards?</summary><p>Yes, including card colours, which Jira itself doesn't offer there.</p></details><details><summary>Does it slow Jira down?</summary><p>Labels and statuses are coloured within about 15 ms of Jira showing them. Card rules need one Jira search per 100 cards on screen.</p></details><details><summary>What if Atlassian changes a page?</summary><p>That colour switches itself off instead of breaking the page, and we fix it within 2 business days.</p></details><details><summary>Can we add our own CSS to Confluence Cloud?</summary><p>Not free CSS, on purpose: one wrong rule can hide content. Tintboard's page styles cover what teams ask for: headings in your colour, serif fonts, links always underlined and striped tables, for the site or each space.</p></details><details><summary>Does it work on mobile?</summary><p>No. Browser extensions don't run in Atlassian's mobile apps.</p></details><details><summary>What happens if our licence lapses?</summary><p>The colours switch off for everyone. Your rules are kept and come back as soon as the licence is renewed.</p></details>
+</section>
+<section class="guides">
+  <h2>Guides</h2>
+  <div class="cards"><a class="card" href="guides/label-colours/"><strong>How to choose label colours in Jira Cloud</strong><span>Jira picks label colours at random. Here is how to choose them.</span></a><a class="card" href="guides/status-colours/"><strong>How to change status colours in Jira Cloud</strong><span>Beyond grey, blue and green, without changing status categories.</span></a><a class="card" href="guides/card-colours/"><strong>How to colour cards in Jira Cloud</strong><span>Tint or stripe cards by label, epic, person or date, on any board.</span></a><a class="card" href="guides/column-colours/"><strong>How to colour board columns and show WIP limits</strong><span>Coloured column titles that turn red over a limit.</span></a><a class="card" href="guides/card-fields/"><strong>How to show more fields on team-managed cards</strong><span>Story points, sprint or any custom field on every board card.</span></a><a class="card" href="guides/confluence-font-size/"><strong>How to change the font size in Confluence Cloud</strong><span>Text size, line spacing and width for every page.</span></a><a class="card" href="guides/code-block-themes/"><strong>How to change the code block theme in Confluence</strong><span>Dark or light themes for code, readable to WCAG AA.</span></a><a class="card" href="guides/page-styles/"><strong>How to style Confluence pages without custom CSS</strong><span>Headings, fonts, links and tables in your team's look, per space.</span></a></div>
+</section>
+</div>
+
+<footer><div class="wrap cols"><div><h2>Product</h2><ul><li><a href="jira/">Tintboard for Jira</a></li><li><a href="confluence/">Tintboard for Confluence</a></li><li><a href="#pricing">Pricing</a></li><li><a href="install/">Install the extension</a></li></ul></div><div><h2>Docs</h2><ul><li><a href="docs/getting-started/">Get started</a></li><li><a href="docs/deploy-extension/">IT deployment guide</a></li><li><a href="docs/remove-data/">Remove Tintboard data</a></li><li><a href="guides/">Guides</a></li><li><a href="changelog/">What's new</a></li></ul></div><div><h2>Company</h2><ul><li><a href="support/">Support</a></li><li><a href="security/">Security</a></li><li><a href="privacy/">Privacy</a></li><li><a href="terms/">Terms</a></li><li><a href="mailto:hello@tintboard.com?subject=Hello">Contact</a></li><li><a href="https://www.linkedin.com/company/tintboard/">LinkedIn</a></li></ul></div></div><div class="wrap legal">Not affiliated with or endorsed by Atlassian. Jira and Confluence are trademarks of Atlassian.</div></footer>
+</body>
+</html>
