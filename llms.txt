@@ -1,0 +1,120 @@
+# Tintboard
+
+> Tintboard is two Atlassian Marketplace apps for Jira Cloud and Confluence Cloud, free for up to 10 users, made in France. Tintboard for Jira lets an admin choose label, status, column, swimlane and card colours (on company- and team-managed boards), show extra fields on cards and narrow the issue view's details panel. Tintboard for Confluence sets font size, line spacing and reading width, code block themes and page styles without custom CSS, for the site or each space, and each reader can adjust them.
+
+How it works: an admin sets everything once in the app's settings page in Jira or Confluence; the free Tintboard browser extension (Chrome, Edge, Firefox) applies it in each person's browser, because Marketplace apps can't restyle Jira's and Confluence's own pages. The extension talks only to the person's own Atlassian site.
+
+- [Tintboard for Jira](https://tintboard.com/jira/): what the Jira app does, with screenshots
+- [Tintboard for Confluence](https://tintboard.com/confluence/): what the Confluence app does, with screenshots
+- [Tintboard for Jira on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/2391653742/tintboard-label-status-and-card-colors-for-jira)
+- [Tintboard for Confluence on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/3987520951/tintboard-font-size-and-reading-width-for-confluence)
+- [Getting started](https://tintboard.com/docs/getting-started/)
+
+## Guides
+
+- [Jira Label Colors: How to Choose Them in Jira Cloud](https://tintboard.com/guides/label-colours/): Jira Cloud picks label colors at random. How to choose the color of each Jira label (blocked in red, customer in purple) for the whole team, on every board.
+- [Jira Status Colors: How to Change Them in Jira Cloud](https://tintboard.com/guides/status-colours/): Jira gives statuses only gray, blue or green. How to give each Jira status its own color without changing its category or your reports.
+- [Confluence Font Size: How to Change It in Confluence Cloud](https://tintboard.com/guides/confluence-font-size/): Confluence Cloud has no font size setting. How to change the default text size, line spacing and reading width for the whole site, a space or each reader.
+- [Confluence Line Spacing: How to Change It in Cloud](https://tintboard.com/guides/confluence-line-spacing/): Confluence Cloud has no line or paragraph spacing setting. What works natively (Shift+Enter, page width) and how to set line spacing per site or space.
+- [Jira Card Colors: Color Cards by Rule, Even Team-Managed](https://tintboard.com/guides/card-colours/): Color Jira cards by label, priority, assignee or due date, on company- and team-managed boards: what Jira card colors can do, and a full-card tint.
+- [Jira Board Color Schemes: 5 Ready-Made Sets (Free)](https://tintboard.com/guides/jira-colour-schemes/): Five ready-made Jira board color schemes: label, status, column and card colors for Scrum, Kanban, support, bugs and colour-blind teams. Apply in one click.
+- [Jira Column Colors and WIP Limits That Stand Out](https://tintboard.com/guides/column-colours/): Give Jira board columns their own colors and a title that turns red over the WIP limit, on company- and team-managed boards.
+- [Jira Swimlane Colors: Color Each Swimlane by Title](https://tintboard.com/guides/swimlane-colours/): Jira swimlanes have no color. How to color each swimlane, by assignee, epic or query, on company- and team-managed boards.
+- [Color Jira Cards by Priority (Team-Managed Boards Too)](https://tintboard.com/guides/priority-colours/): Make highest-priority Jira cards stand out: Jira card colors by priority, and full-card tints by priority on any board, team-managed included.
+- [Show More Fields on Jira Cards (Team-Managed Boards)](https://tintboard.com/guides/card-fields/): Show story points, sprint, due date or any custom field on Jira board cards, including team-managed boards, without opening each issue.
+- [Confluence Code Block Themes: Change the Code Theme in Cloud](https://tintboard.com/guides/code-block-themes/): Confluence Cloud has no code block theme option. Set dark or light code themes (Paper, Mint, Night, Ocean, High contrast) for every block, all WCAG AA.
+- [Change the Font in Confluence Cloud (No Custom CSS)](https://tintboard.com/guides/page-styles/): Confluence Cloud has no font picker or custom CSS. Set a serif font, heading styles, underlined links and striped tables for the site or each space.
+- [Widen the Jira Issue View or Hide the Details Panel](https://tintboard.com/guides/issue-view-width/): More room for the description in the Jira issue view: narrow or hide the details panel for you or your whole team, keeping the status in view.
+- [Color-Blind Friendly Jira Boards: Palette and Legend](https://tintboard.com/guides/colour-blind-boards/): Make Jira boards readable for color-blind teammates: habits that help, a color-blind-safe palette (Okabe-Ito) and a legend on every board.
+- [Jira Free Plan: Label, Card and Status Colors](https://tintboard.com/guides/jira-free-plan-colours/): Teams on the Jira Free plan (up to 10 users) get no card colors on team-managed boards. How to color labels, statuses and cards for free.
+
+## Free tools
+
+- [Confluence Font Size and Width Preview (Free Tool)](https://tintboard.com/tools/confluence-reading-preview/): Free preview of Confluence font size, line spacing and page width on a sample page, with the characters per line readers find comfortable.
+- [Jira Card Color JQL Builder (Free Tool)](https://tintboard.com/tools/jira-card-colour-jql/): Free JQL builder for Jira card colors: overdue, blocked, due soon and stale cards, in the right order for Board settings, with a live preview.
+- [Jira Color Checker: Color-Blind Safe Labels (Free Tool)](https://tintboard.com/tools/jira-colour-checker/): Free Jira color checker: see your label colors as color-blind teammates do, find look-alike pairs and low-contrast text, and fix them in one click.
+
+## Docs
+
+- [Get started with Tintboard](https://tintboard.com/docs/getting-started/): Tintboard has two parts: an app that your Jira or Confluence admin installs from the Atlassian Marketplace, and a free browser extension that shows the…
+- [Install the Tintboard extension for everyone](https://tintboard.com/docs/deploy-extension/): Tintboard's colours appear for people who have the Tintboard browser extension. Instead of asking each person to install it, IT can push it to every…
+- [Remove Tintboard's data from your site](https://tintboard.com/docs/remove-data/): Uninstalling Tintboard deletes its Forge storage . Two kinds of small properties stay in your own Jira and Confluence until an admin deletes them.…
+- [Privacy Policy](https://tintboard.com/privacy/): What Tintboard processes: nothing leaves your Atlassian site, the extension sends nothing to us, and we see personal data only when you contact us.
+- [Security](https://tintboard.com/security/): Tintboard is built so that there is as little as possible to protect: no Tintboard server holds or receives customer data.
+- [Support](https://tintboard.com/support/): Email hello@tintboard.com. We answer within 1 business day, in English or French.
+- [Not an admin? Ask yours for Tintboard](https://tintboard.com/ask-your-admin/): Not a Jira or Confluence admin? Send yours a ready-made message about Tintboard: what it does, what it costs and what it asks of the team.
+- [Tell us how you use Tintboard](https://tintboard.com/tell-us/): Tell us how your team uses Tintboard, what you would like next, and whether we may quote you.
+- [Tintboard roadmap](https://tintboard.com/roadmap/): Tintboard's roadmap: what we're working on, what we're considering next, what shipped recently, and how to request a feature.
+- [For Atlassian partners: Tintboard for your clients](https://tintboard.com/partners/): For Atlassian Solution Partners: what Tintboard gives your clients, rolling it out company-wide, trials and how to reach us.
+- [What's new](https://tintboard.com/changelog/): Tintboard updates reach you automatically: the apps update on Atlassian, and the browser stores update the extension.
+- [Provider-Specific Terms](https://tintboard.com/terms/): Terms that supplement the Atlassian Marketplace end-user agreement for Tintboard: the extension, free tier, support and governing law.
+
+## Tintboard en français
+
+- [Tintboard : couleurs Jira et taille de police Confluence](https://tintboard.com/fr/): Couleurs des étiquettes, statuts et cartes dans Jira Cloud, taille de police et largeur de lecture dans Confluence Cloud. Gratuit jusqu’à 10 utilisateurs.
+- [Couleur des étiquettes Jira : la choisir dans Jira Cloud](https://tintboard.com/fr/guides/couleurs-etiquettes-jira/): Depuis 2026, Jira Cloud affiche les étiquettes  en couleur, mais il choisit les couleurs lui-même, au hasard. Impossible de mettre bloqué en rouge ou…
+- [Couleur des statuts Jira : la changer dans Jira Cloud](https://tintboard.com/fr/guides/couleurs-statuts-jira/): Jira donne à chaque statut l'une de trois couleurs, selon sa catégorie de statut : gris pour À faire, bleu pour En cours et vert pour Terminé. Résultat…
+- [Couleur des cartes Jira : colorer un tableau par règle](https://tintboard.com/fr/guides/couleurs-cartes-jira/): Des cartes en couleur rendent un tableau lisible de loin : le travail bloqué en rouge, les bugs avec une bande, vos propres cartes mises en avant. Jira…
+- [Tableaux Jira lisibles pour les daltoniens](https://tintboard.com/fr/guides/tableaux-jira-daltoniens/): Environ 1 homme sur 12 et 1 femme sur 200 ont un trouble de la vision des couleurs. Sur un tableau Jira, c'est souvent la différence entre « les cartes…
+- [Jira gratuit (Free) : couleurs des étiquettes et cartes](https://tintboard.com/fr/guides/jira-gratuit-couleurs/): L'offre gratuite de Jira  est faite pour les équipes de 10 personnes au plus, et la plupart utilisent des projets gérés par l'équipe. C'est là que Jira…
+- [Taille de police Confluence Cloud : comment la changer](https://tintboard.com/fr/guides/taille-police-confluence/): Confluence Cloud n'a aucun réglage de taille de police : tous les lecteurs ont la même taille de texte et le même interligne. Si les longues pages…
+
+## Tintboard auf Deutsch
+
+- [Tintboard: Jira-Farben und Confluence-Schriftgröße](https://tintboard.com/de/): Farben für Labels, Status und Karten in Jira Cloud, Schriftgröße und Lesebreite in Confluence Cloud. Kostenlos für bis zu 10 Benutzer.
+- [Jira Label-Farben ändern: so geht es in Jira Cloud](https://tintboard.com/de/guides/jira-label-farben/): Seit 2026 zeigt Jira Cloud Labels farbig an, wählt die Farben aber selbst, nach Zufall. blockiert lässt sich nicht rot machen und kunde nicht lila, und…
+- [Jira Status-Farben ändern in Jira Cloud](https://tintboard.com/de/guides/jira-status-farben/): Jira gibt jedem Status eine von drei Farben, je nach seiner Statuskategorie: Grau für Aufgaben, Blau für In Arbeit und Grün für Fertig. Deshalb sehen In…
+- [Jira Kartenfarben: Karten nach Regeln einfärben](https://tintboard.com/de/guides/jira-kartenfarben/): Farbige Karten machen ein Board auf Distanz lesbar: Blockiertes in Rot, Bugs mit Streifen, die eigenen Karten hervorgehoben. Jira Cloud hat dafür eine…
+- [Jira-Boards für Farbenblinde lesbar machen](https://tintboard.com/de/guides/jira-boards-farbenblind/): Etwa 1 von 12 Männern und 1 von 200 Frauen haben eine Farbsehschwäche. Auf einem Jira-Board ist das oft der Unterschied zwischen „die roten Karten sind…
+- [Jira Free: Farben für Labels, Karten und Status](https://tintboard.com/de/guides/jira-free-farben/): Der kostenlose Jira-Plan  ist für Teams mit bis zu 10 Personen gedacht, und die meisten nutzen vom Team verwaltete Projekte. Genau dort bietet Jira die…
+- [Confluence Cloud Schriftgröße ändern: so geht es](https://tintboard.com/de/guides/confluence-schriftgroesse/): Confluence Cloud hat keine Einstellung für die Schriftgröße: Alle lesen mit derselben Textgröße und demselben Zeilenabstand. Wenn lange Seiten Ihre…
+
+## Tintboard en español
+
+- [Tintboard: colores en Jira y tamaño de letra en Confluence](https://tintboard.com/es/): Colores de etiquetas, estados y tarjetas en Jira Cloud, tamaño de letra y ancho de lectura en Confluence Cloud. Gratis hasta 10 usuarios.
+- [Colores de etiquetas en Jira: cómo elegirlos en Jira Cloud](https://tintboard.com/es/guides/colores-etiquetas-jira/): Desde 2026, Jira Cloud muestra las etiquetas  en color, pero elige los colores él mismo, al azar. No se puede poner bloqueado en rojo ni cliente en…
+- [Colores de estados en Jira: cómo cambiarlos en Jira Cloud](https://tintboard.com/es/guides/colores-estados-jira/): Jira da a cada estado uno de tres colores, según su categoría de estado: gris para Por hacer, azul para En curso y verde para Listo. Por eso En…
+- [Colores de tarjetas en Jira: colorear por reglas](https://tintboard.com/es/guides/colores-tarjetas-jira/): Las tarjetas de color hacen un tablero legible de lejos: lo bloqueado en rojo, los bugs con una franja, sus propias tarjetas destacadas. Jira Cloud…
+- [Tableros de Jira legibles para personas daltónicas](https://tintboard.com/es/guides/tableros-jira-daltonicos/): Alrededor de 1 de cada 12 hombres y 1 de cada 200 mujeres tienen algún tipo de alteración de la visión de los colores. En un tablero de Jira, suele ser…
+- [Jira gratis (Free): colores de etiquetas y tarjetas](https://tintboard.com/es/guides/jira-gratis-colores/): El plan gratuito de Jira  está pensado para equipos de hasta 10 personas, y la mayoría usa proyectos gestionados por el equipo. Ahí es donde Jira ofrece…
+- [Tamaño de letra en Confluence Cloud: cómo cambiarlo](https://tintboard.com/es/guides/tamano-letra-confluence/): Confluence Cloud no tiene ningún ajuste de tamaño de letra: todos leen con el mismo tamaño de texto y el mismo interlineado. Si las páginas largas…
+
+## Tintboard em português
+
+- [Tintboard: cores no Jira e fonte no Confluence](https://tintboard.com/pt/): Cores de etiquetas, status e cartões no Jira Cloud, tamanho da fonte e largura de leitura no Confluence Cloud. Grátis para até 10 usuários.
+- [Cor das etiquetas no Jira: como escolher no Jira Cloud](https://tintboard.com/pt/guides/cores-etiquetas-jira/): Desde 2026, o Jira Cloud mostra as etiquetas  em cores, mas escolhe as cores sozinho, ao acaso. Não dá para deixar bloqueado em vermelho ou cliente em…
+- [Cor dos status no Jira: como mudar no Jira Cloud](https://tintboard.com/pt/guides/cores-status-jira/): O Jira dá a cada status uma de três cores, de acordo com a categoria do status: cinza para A fazer, azul para Em andamento e verde para Concluído. Por…
+- [Cor dos cartões no Jira: colorir por regras](https://tintboard.com/pt/guides/cores-cartoes-jira/): Cartões coloridos deixam um quadro legível de longe: o trabalho bloqueado em vermelho, os bugs com uma faixa, os seus próprios cartões em destaque. O…
+- [Quadros do Jira legíveis para daltônicos](https://tintboard.com/pt/guides/quadros-jira-daltonicos/): Cerca de 1 em cada 12 homens e 1 em cada 200 mulheres têm algum tipo de alteração na visão das cores. Em um quadro do Jira, isso costuma ser a diferença…
+- [Jira grátis (Free): cores de etiquetas e cartões](https://tintboard.com/pt/guides/jira-gratis-cores/): O plano gratuito do Jira  é feito para equipes de até 10 pessoas, e a maioria usa projetos gerenciados pela equipe. É justamente aí que o Jira oferece…
+- [Tamanho da fonte no Confluence Cloud: como mudar](https://tintboard.com/pt/guides/tamanho-fonte-confluence/): O Confluence Cloud não tem nenhuma configuração de tamanho de fonte: todos leem com o mesmo tamanho de texto e o mesmo espaçamento. Se as páginas longas…
+
+## Tintboard 日本語
+
+- [Tintboard：Jira の色と Confluence の文字サイズ](https://tintboard.com/ja/): Jira Cloud のラベル・ステータス・カードの色と、Confluence Cloud の文字サイズ・読みやすい幅を設定。10 ユーザーまで無料。
+- [Jira Cloud でラベルの色を設定する方法](https://tintboard.com/ja/guides/jira-label-colors/): 2026 年から Jira Cloud はラベルを色付きで表示しますが、色は Jira がランダムに決めます。blocked を赤に、customer を紫にすることはできず、意味がまったく違う 2 つのラベルが同じ色になることもあります。できることは次のとおりです。
+- [Jira Cloud でステータスの色を変える方法](https://tintboard.com/ja/guides/jira-status-colors/): Jira は各ステータスに、ステータスカテゴリに応じて 3 色のいずれかを付けます。To Do はグレー、進行中 は青、完了 は緑です。そのため レビュー中、ブロック中、顧客待ち はたいてい同じ青になります。
+- [Jira のカードの色：ルールでボードを色分け](https://tintboard.com/ja/guides/jira-card-colors/): 色付きのカードがあると、ボードを遠くからでも読み取れます。ブロック中の作業は赤、バグはストライプ、自分のカードは強調表示。Jira Cloud には標準機能がありますが、すべてのボードで使えるわけではありません。
+- [色覚の多様性に配慮した Jira ボード](https://tintboard.com/ja/guides/jira-color-blind-boards/): 男性の約 12 人に 1 人、女性の約 200 人に 1 人が何らかの色覚特性を持っています。Jira ボードでは、それが「赤いカードはブロック中」と「一部のカードが少し暗い」の違いになることがあります。いくつかの習慣で、色を誰にとっても役立つものにできます。
+- [Jira Free プラン：ラベル・カード・ステータスの色](https://tintboard.com/ja/guides/jira-free-colors/): Jira の Free プランは最大 10 人のチーム向けで、多くのチームがチーム管理対象プロジェクトを使っています。そこが、Jira で色の選択肢が最も少ない場所です。ラベルの色は Jira が決め、ステータスはカテゴリに従い、チーム管理対象ボードにはカードの色がありません。
+- [Confluence Cloud の文字サイズを変える方法](https://tintboard.com/ja/guides/confluence-font-size/): Confluence Cloud には文字サイズの設定がありません。全員が同じ文字サイズと行間で読みます。長いページで読者が疲れる場合や、弱視やディスレクシアの読者がいる場合は、次の方法があります。
+
+## Tintboard 中文
+
+- [Tintboard：Jira 颜色与 Confluence 字号](https://tintboard.com/zh/): 在 Jira Cloud 中设置标签、状态和卡片颜色，在 Confluence Cloud 中设置字号和阅读宽度。最多 10 位用户免费。
+- [如何在 Jira Cloud 中设置标签颜色](https://tintboard.com/zh/guides/jira-label-colors/): 自 2026 年起，Jira Cloud 会以彩色显示标签，但颜色由 Jira 随机分配。您无法把 blocked 设为红色或把 customer 设为紫色，含义完全不同的两个标签也可能是同一种颜色。下面是可行的做法。
+- [如何在 Jira Cloud 中更改状态颜色](https://tintboard.com/zh/guides/jira-status-colors/): Jira 根据状态类别给每个状态三种颜色之一：待办 为灰色，进行中 为蓝色，完成 为绿色。因此 审核中、受阻 和 等待客户 通常都是同一种蓝色。
+- [Jira 卡片颜色：按规则为看板卡片着色](https://tintboard.com/zh/guides/jira-card-colors/): 彩色卡片让看板远远一看就清楚：受阻的工作显示红色，缺陷带色条，自己的卡片突出显示。Jira Cloud 有原生选项，但并非所有看板都能用。
+- [让色盲同事也能看清的 Jira 看板](https://tintboard.com/zh/guides/jira-color-blind-boards/): 大约每 12 位男性和每 200 位女性中就有 1 位有某种色觉异常。在 Jira 看板上，这往往就是“红色卡片被阻塞了”和“有些卡片颜色稍深”之间的区别。几个习惯就能让颜色对每个人都有效。
+- [Jira 免费版：标签、卡片和状态的颜色](https://tintboard.com/zh/guides/jira-free-colors/): Jira 免费版（Free）面向最多 10 人的团队，大多数团队使用团队管理的项目。而这正是 Jira 颜色选项最少的地方：标签颜色由 Jira 决定，状态跟随类别，团队管理的看板没有卡片颜色。
+- [如何更改 Confluence Cloud 的字号](https://tintboard.com/zh/guides/confluence-font-size/): Confluence Cloud 没有字号设置：所有读者看到的字号和行距都一样。如果长页面让读者疲劳，或者有读者视力较弱或有阅读障碍，可以考虑以下方法。
+
+## Tintboard بالعربية
+
+- [Tintboard: ألوان Jira وحجم خط Confluence](https://tintboard.com/ar/): ألوان التسميات والحالات والبطاقات في Jira Cloud، وحجم الخط وعرض القراءة في Confluence Cloud. مجاني حتى 10 مستخدمين.
+- [ألوان التسميات في Jira: كيف تختارها في Jira Cloud](https://tintboard.com/ar/guides/jira-label-colors/): منذ عام 2026 يعرض Jira Cloud التسميات بالألوان، لكنه يختار الألوان بنفسه وبشكل عشوائي. لا يمكنك جعل blocked باللون الأحمر أو customer باللون البنفسجي،…
+- [ألوان الحالات في Jira: كيف تغيّرها في Jira Cloud](https://tintboard.com/ar/guides/jira-status-colors/): يعطي Jira كل حالة أحد ثلاثة ألوان حسب فئة الحالة: الرمادي لـ To Do، والأزرق لـ In Progress، والأخضر لـ Done. لذلك تظهر حالات مثل In Review وBlocked…
+- [ألوان البطاقات في Jira: تلوين البطاقات حسب القواعد](https://tintboard.com/ar/guides/jira-card-colors/): البطاقات الملونة تجعل اللوحة مقروءة من بعيد: العمل المتوقف بالأحمر، والأخطاء بشريط ملون، وبطاقاتك مميزة. لدى Jira Cloud خيار مدمج، لكنه ليس متاحًا على…
+- [لوحات Jira واضحة للزملاء المصابين بعمى الألوان](https://tintboard.com/ar/guides/jira-color-blind-boards/): نحو رجل من كل 12 وامرأة من كل 200 لديهم نوع من ضعف رؤية الألوان. على لوحة Jira، يكون ذلك غالبًا الفرق بين «البطاقات الحمراء متوقفة» و«بعض البطاقات أغمق…
+- [خطة Jira المجانية: ألوان التسميات والبطاقات والحالات](https://tintboard.com/ar/guides/jira-free-colors/): خطة Jira المجانية  مخصصة للفرق التي لا يتجاوز عددها 10 أشخاص، ومعظمها يستخدم مشاريع يديرها الفريق. وهنا بالذات يوفر Jira أقل الألوان: لون التسميات…
+- [كيف تغيّر حجم الخط في Confluence Cloud](https://tintboard.com/ar/guides/confluence-font-size/): لا يحتوي Confluence Cloud على أي إعداد لحجم الخط: يقرأ الجميع بحجم النص نفسه وتباعد الأسطر نفسه. إذا كانت الصفحات الطويلة تُتعب قرّاءك، أو كان بعضهم…

@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "labels": [
+    {
+      "label": "expedite",
+      "colour": "#ae2e24"
+    },
+    {
+      "label": "blocked",
+      "colour": "#f38a3f"
+    },
+    {
+      "label": "waiting",
+      "colour": "#f5cd47"
+    }
+  ],
+  "statuses": [
+    {
+      "status": "Backlog",
+      "colour": "#44546f"
+    },
+    {
+      "status": "Selected for Development",
+      "colour": "#626f86"
+    },
+    {
+      "status": "In Progress",
+      "colour": "#0c66e4"
+    },
+    {
+      "status": "In Review",
+      "colour": "#6e5dc6"
+    },
+    {
+      "status": "Done",
+      "colour": "#216e4e"
+    }
+  ],
+  "columns": [
+    {
+      "column": "Backlog",
+      "colour": "#44546f"
+    },
+    {
+      "column": "Selected for Development",
+      "colour": "#626f86",
+      "limit": 8
+    },
+    {
+      "column": "In Progress",
+      "colour": "#0c66e4",
+      "limit": 4
+    },
+    {
+      "column": "In Review",
+      "colour": "#6e5dc6",
+      "limit": 2
+    },
+    {
+      "column": "Done",
+      "colour": "#216e4e"
+    }
+  ],
+  "cardRules": [
+    {
+      "id": "kanban-expedite",
+      "name": "Expedite",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "label",
+          "value": "expedite"
+        }
+      ],
+      "style": "tint",
+      "colour": "#ae2e24",
+      "boardIds": []
+    },
+    {
+      "id": "kanban-blocked",
+      "name": "Blocked",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "label",
+          "value": "blocked"
+        }
+      ],
+      "style": "tint",
+      "colour": "#f38a3f",
+      "boardIds": []
+    },
+    {
+      "id": "kanban-overdue",
+      "name": "Overdue",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "overdue",
+          "value": "true"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#ae2e24",
+      "boardIds": []
+    },
+    {
+      "id": "kanban-stale",
+      "name": "Not moved for 5 days",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "notUpdatedFor",
+          "value": "5"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#626f86",
+      "boardIds": []
+    }
+  ],
+  "swimlanes": [],
+  "cardFields": [],
+  "projects": {},
+  "issueView": {
+    "wide": false,
+    "collapsePanel": false,
+    "pinStatus": true
+  },
+  "boardLegend": true,
+  "reading": {
+    "site": null,
+    "spaces": {},
+    "codeTheme": null,
+    "style": null,
+    "spaceStyles": {}
+  }
+}

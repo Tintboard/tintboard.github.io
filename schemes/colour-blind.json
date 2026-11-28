@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "labels": [
+    {
+      "label": "blocked",
+      "colour": "#b84a00"
+    },
+    {
+      "label": "urgent",
+      "colour": "#e69f00"
+    },
+    {
+      "label": "customer",
+      "colour": "#56b4e9"
+    }
+  ],
+  "statuses": [
+    {
+      "status": "To Do",
+      "colour": "#44546f"
+    },
+    {
+      "status": "In Progress",
+      "colour": "#0072b2"
+    },
+    {
+      "status": "In Review",
+      "colour": "#cc79a7"
+    },
+    {
+      "status": "Blocked",
+      "colour": "#b84a00"
+    },
+    {
+      "status": "Done",
+      "colour": "#007a5a"
+    }
+  ],
+  "columns": [
+    {
+      "column": "To Do",
+      "colour": "#44546f"
+    },
+    {
+      "column": "In Progress",
+      "colour": "#0072b2",
+      "limit": 5
+    },
+    {
+      "column": "In Review",
+      "colour": "#cc79a7",
+      "limit": 3
+    },
+    {
+      "column": "Done",
+      "colour": "#007a5a"
+    }
+  ],
+  "cardRules": [
+    {
+      "id": "cb-blocked",
+      "name": "Blocked",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "label",
+          "value": "blocked"
+        }
+      ],
+      "style": "tint",
+      "colour": "#b84a00",
+      "boardIds": []
+    },
+    {
+      "id": "cb-overdue",
+      "name": "Overdue",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "overdue",
+          "value": "true"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#e69f00",
+      "boardIds": []
+    },
+    {
+      "id": "cb-bugs",
+      "name": "Bugs",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "issueType",
+          "value": "Bug"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#cc79a7",
+      "boardIds": []
+    },
+    {
+      "id": "cb-mine",
+      "name": "My cards",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "assigneeIsMe",
+          "value": "true"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#0072b2",
+      "boardIds": []
+    }
+  ],
+  "swimlanes": [],
+  "cardFields": [],
+  "projects": {},
+  "issueView": {
+    "wide": false,
+    "collapsePanel": false,
+    "pinStatus": true
+  },
+  "boardLegend": true,
+  "reading": {
+    "site": null,
+    "spaces": {},
+    "codeTheme": null,
+    "style": null,
+    "spaceStyles": {}
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "labels": [
+    {
+      "label": "regression",
+      "colour": "#ae2e24"
+    },
+    {
+      "label": "security",
+      "colour": "#f38a3f"
+    }
+  ],
+  "statuses": [
+    {
+      "status": "To Do",
+      "colour": "#44546f"
+    },
+    {
+      "status": "In Progress",
+      "colour": "#0c66e4"
+    },
+    {
+      "status": "In Review",
+      "colour": "#6e5dc6"
+    },
+    {
+      "status": "Blocked",
+      "colour": "#ae2e24"
+    },
+    {
+      "status": "Done",
+      "colour": "#216e4e"
+    }
+  ],
+  "columns": [
+    {
+      "column": "To Do",
+      "colour": "#44546f"
+    },
+    {
+      "column": "In Progress",
+      "colour": "#0c66e4",
+      "limit": 5
+    },
+    {
+      "column": "In Review",
+      "colour": "#6e5dc6",
+      "limit": 3
+    },
+    {
+      "column": "Done",
+      "colour": "#216e4e"
+    }
+  ],
+  "cardRules": [
+    {
+      "id": "bugs-highest",
+      "name": "Critical bugs",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "issueType",
+          "value": "Bug"
+        },
+        {
+          "field": "priority",
+          "value": "Highest"
+        }
+      ],
+      "style": "tint",
+      "colour": "#ae2e24",
+      "boardIds": []
+    },
+    {
+      "id": "bugs-all",
+      "name": "Bugs",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "issueType",
+          "value": "Bug"
+        }
+      ],
+      "style": "tint",
+      "colour": "#f38a3f",
+      "boardIds": []
+    },
+    {
+      "id": "bugs-high",
+      "name": "High priority",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "priority",
+          "value": "High"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#f38a3f",
+      "boardIds": []
+    }
+  ],
+  "swimlanes": [],
+  "cardFields": [],
+  "projects": {},
+  "issueView": {
+    "wide": false,
+    "collapsePanel": false,
+    "pinStatus": true
+  },
+  "boardLegend": true,
+  "reading": {
+    "site": null,
+    "spaces": {},
+    "codeTheme": null,
+    "style": null,
+    "spaceStyles": {}
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "labels": [
+    {
+      "label": "blocked",
+      "colour": "#ae2e24"
+    },
+    {
+      "label": "tech-debt",
+      "colour": "#626f86"
+    },
+    {
+      "label": "design",
+      "colour": "#6cc3e0"
+    }
+  ],
+  "statuses": [
+    {
+      "status": "To Do",
+      "colour": "#44546f"
+    },
+    {
+      "status": "In Progress",
+      "colour": "#0c66e4"
+    },
+    {
+      "status": "In Review",
+      "colour": "#6e5dc6"
+    },
+    {
+      "status": "Blocked",
+      "colour": "#ae2e24"
+    },
+    {
+      "status": "Done",
+      "colour": "#216e4e"
+    }
+  ],
+  "columns": [
+    {
+      "column": "To Do",
+      "colour": "#44546f"
+    },
+    {
+      "column": "In Progress",
+      "colour": "#0c66e4",
+      "limit": 5
+    },
+    {
+      "column": "In Review",
+      "colour": "#6e5dc6",
+      "limit": 3
+    },
+    {
+      "column": "Done",
+      "colour": "#216e4e"
+    }
+  ],
+  "cardRules": [
+    {
+      "id": "scrum-blocked",
+      "name": "Blocked",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "label",
+          "value": "blocked"
+        }
+      ],
+      "style": "tint",
+      "colour": "#ae2e24",
+      "boardIds": []
+    },
+    {
+      "id": "scrum-overdue",
+      "name": "Overdue",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "overdue",
+          "value": "true"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#f38a3f",
+      "boardIds": []
+    },
+    {
+      "id": "scrum-soon",
+      "name": "Due this week",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "dueWithin",
+          "value": "7"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#f5cd47",
+      "boardIds": []
+    },
+    {
+      "id": "scrum-stale",
+      "name": "Untouched for a week",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "notUpdatedFor",
+          "value": "7"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#626f86",
+      "boardIds": []
+    },
+    {
+      "id": "scrum-mine",
+      "name": "My cards",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "assigneeIsMe",
+          "value": "true"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#0c66e4",
+      "boardIds": []
+    },
+    {
+      "id": "scrum-bugs",
+      "name": "Bugs",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "issueType",
+          "value": "Bug"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#ae2e24",
+      "boardIds": []
+    }
+  ],
+  "swimlanes": [],
+  "cardFields": [],
+  "projects": {},
+  "issueView": {
+    "wide": false,
+    "collapsePanel": false,
+    "pinStatus": true
+  },
+  "boardLegend": true,
+  "reading": {
+    "site": null,
+    "spaces": {},
+    "codeTheme": null,
+    "style": null,
+    "spaceStyles": {}
+  }
+}

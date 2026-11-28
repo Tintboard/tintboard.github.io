@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "labels": [
+    {
+      "label": "customer",
+      "colour": "#6e5dc6"
+    },
+    {
+      "label": "escalated",
+      "colour": "#ae2e24"
+    },
+    {
+      "label": "waiting-for-customer",
+      "colour": "#f5cd47"
+    }
+  ],
+  "statuses": [
+    {
+      "status": "To Do",
+      "colour": "#44546f"
+    },
+    {
+      "status": "In Progress",
+      "colour": "#0c66e4"
+    },
+    {
+      "status": "In Review",
+      "colour": "#6e5dc6"
+    },
+    {
+      "status": "Blocked",
+      "colour": "#ae2e24"
+    },
+    {
+      "status": "Done",
+      "colour": "#216e4e"
+    }
+  ],
+  "columns": [
+    {
+      "column": "To Do",
+      "colour": "#44546f"
+    },
+    {
+      "column": "In Progress",
+      "colour": "#0c66e4",
+      "limit": 5
+    },
+    {
+      "column": "In Review",
+      "colour": "#6e5dc6",
+      "limit": 3
+    },
+    {
+      "column": "Done",
+      "colour": "#216e4e"
+    }
+  ],
+  "cardRules": [
+    {
+      "id": "support-highest",
+      "name": "Highest priority",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "priority",
+          "value": "Highest"
+        }
+      ],
+      "style": "tint",
+      "colour": "#ae2e24",
+      "boardIds": []
+    },
+    {
+      "id": "support-overdue",
+      "name": "Overdue",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "overdue",
+          "value": "true"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#ae2e24",
+      "boardIds": []
+    },
+    {
+      "id": "support-customer",
+      "name": "Customer requests",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "label",
+          "value": "customer"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#6e5dc6",
+      "boardIds": []
+    },
+    {
+      "id": "support-mine",
+      "name": "My requests",
+      "enabled": true,
+      "conditions": [
+        {
+          "field": "assigneeIsMe",
+          "value": "true"
+        }
+      ],
+      "style": "stripe",
+      "colour": "#0c66e4",
+      "boardIds": []
+    }
+  ],
+  "swimlanes": [],
+  "cardFields": [],
+  "projects": {},
+  "issueView": {
+    "wide": false,
+    "collapsePanel": false,
+    "pinStatus": true
+  },
+  "boardLegend": true,
+  "reading": {
+    "site": null,
+    "spaces": {},
+    "codeTheme": null,
+    "style": null,
+    "spaceStyles": {}
+  }
+}
